@@ -5,7 +5,7 @@
 * [ ] prepare for certification test
 * [ ] build a groundwork for any upcoming work
 * [ ] reuse code and knowlege for other Shopware plugins
-* [ ] reuse concepts for other WordPress plugins
+* [ ] reuse concepts for other WordPress / WooCommerce plugins
 
 ## Possible Assignment
 
