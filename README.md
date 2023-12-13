@@ -58,12 +58,35 @@ These features are not required to pass a simple coding test, but they also seem
 * [ ] use content snippets
 * [ ] localize content
 
-### Shopware 6 Project Repositories / Ideas
-
-* [IngoSDev6CertPrep](https://github.com/openmindculture/IngoSDev6CertPrep)
-* [IngoSCutePinkLightTheme](https://github.com/openmindculture/IngoSCutePinkLightTheme)
-* [IngoSCarbonFootprintApi](https://github.com/openmindculture/IngoSCarbonFootprintApi)
-
 #### Shopware Installations
 
 * [localhost](http://localhost/) (dockware/dev)
+
+##### Enter the Container Shell
+
+`docker exec -it shop bash`
+
+##### Shopware Platform Source Code in Dockware
+
+- `/var/www/html/vendor/shopware`
+
+##### Shopware CLI Scripts
+
+There is no more `psh.phar` in Shopware 6.5, but there is still `bin/console` and additional scripts in `/var/www/html/bin`:
+
+- `build-administration.sh`
+- `build-js.sh`
+- `build-storefront.sh`
+- `ci`
+- `console`
+- `functions.sh`
+- `watch-administration.sh`
+- `watch-storefront.sh`
+
+##### Shopware Logs in Dockware
+
+- `/var/www/html/var/log`
+
+##### System Logs in Dockware
+
+- `/var/log`
