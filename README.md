@@ -7,13 +7,20 @@
 * [ ] reuse code and knowlege for other Shopware plugins
 * [ ] reuse concepts for other WordPress / WooCommerce plugins
 
-## Possible Assignment
+## Possible Assignment Requirements
 
-Complete this demo plugin to recapitulate Shopware 6 developer tutorial before certification.
+Complete this demo plugin to recapitulate Shopware 6 developer tutorial before certification. Create a Shopware 6 plugin using a controller to create a new puplic API endpoint to display custom content in the storefront. Also apply custom styles.
 
-### Requirements
+## Updates
 
-Create a Shopware 6 plugin using a controller to create a new puplic API endpoint to display custom content in the storefront. Also apply custom styles.
+This setup obsoletes earlier approaches based on [shopware/development](https://github.com/shopware/development) and the new official [nix](https://nixos.org)-based [devenv](https://developer.shopware.com/docs/guides/installation/devenv.html).
+
+With a [dockware](https://dockware.io/)-based setup, we don't need no parent project container repository anymore! `custom/plugins` is now mounted to the project `src` directory as recommended in the [dockware example files on GitHub](https://github.com/dockware/examples).
+
+## Deprecations
+
+- since 6.5 there is no psh.phar anymore. You can find the replacements in the bin folder just ./bin/watch-administration.sh and so on (source: shyim in Shopware Slack)
+- see my subjective selective changelog post [Shopware changes since the 6.0 dev training videos](https://dev.to/ingosteinke/shopware-changes-since-the-60-dev-training-videos-481o) for more changes since 6.0/6.1
 
 ### Learning Goals / TODO List
 
