@@ -70,6 +70,10 @@ These features are not required to pass a simple coding test, but they also seem
 
 - `/var/www/html/vendor/shopware`
 
+TODO: mounting this as a secondary volume broke the installation. Workaround to see the shop source in the IDE: check it out into another, gitignored, directory:
+
+`git clone https://github.com/shopware/shopware.git sw_platform_src`
+
 ##### Shopware CLI Scripts
 
 There is no more `psh.phar` in Shopware 6.5, but there is still `bin/console` and additional scripts in `/var/www/html/bin`:
