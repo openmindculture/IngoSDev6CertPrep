@@ -1,76 +1,75 @@
-# Roadmap
+# Shopware 6 Theme Plugin Development Templates
 
-* [x] make a "roadmap" for learning and coding
-* [x] prepare for certification test
-* [x] plan plugins to release in the official store
-* [x] build a groundwork for any upcoming work
-* [x] reuse concepts for other WordPress / WooCommerce plugins
-* [ ] update setup and plugin code due to deprecations
-* [ ] prepare for certification test
-* [ ] reuse code and knowledge for other Shopware plugins
+How to develop themes plugins for Shopware 6 when the documentation is often incomplete or outdated and many certificied Shopware development agencies keep their experience and knowledge secret or they are just too busy to share? This repository obsoletes earlier versions that I created as container for learning and open-source development. I tried to collect and share publicly available information here, on Slack, and in my DEV blog series [Learning in Public]/https://dev.to/ingosteinke/series/16707).
 
-## Possible Assignment Requirements
+My notes and examples try to follow a pragmatic interpretation of the latest best practice for Shopware 6.5 community edition.
 
-Complete this demo plugin to recapitulate Shopware 6 developer tutorial before certification. Create a Shopware 6 plugin using a controller to create a new public API endpoint to display custom content in the storefront. Add some custom styles and consider that plugin reviewers might install your plugin in a subdomain using an non-default locale like Dutch or Turkish, e.g. https://shopware.example.com/pazar/tr_TR/
+## Dockware Development Environment
 
-## Updates
+Thanks to [dasistweb](https://www.dasistweb.de/), the Docker-based [dockware](https://docs.dockware.io/) containers provide a useful alternative to Shopware's nixOS/flex/[devenv-based approach](https://developer.shopware.com/docs/guides/installation/devenv.html). The setup is based on the lastest dev image. We don't need no parent project container repository anymore! `custom/plugins` is now mounted to the project `src` directory as recommended in the [dockware example files on GitHub](https://github.com/dockware/examples).
 
-This setup obsoletes earlier approaches based on [shopware/development](https://github.com/shopware/development) and the new official [nix](https://nixos.org)-based [devenv](https://developer.shopware.com/docs/guides/installation/devenv.html).
+## Plugins
 
-With a [dockware](https://dockware.io/)-based setup, we don't need no parent project container repository anymore! `custom/plugins` is now mounted to the project `src` directory as recommended in the [dockware example files on GitHub](https://github.com/dockware/examples).
+### IngoS\Dev6CertPrep
 
-## Deprecations
+This theme plugin is based on a maximum example created by `bin/console plugin:create` and adding a preview image and additional frontend-specific asset resources like a favicon icon for localhost. Using a `theme.json` file is optional and its content might be redundant as long as the default locations for assets don't change.
 
-- since 6.5 there is no psh.phar anymore. You can find the replacements in the bin folder just ./bin/watch-administration.sh and so on (source: shyim in Shopware Slack)
-- see my subjective selective changelog post [Shopware changes since the 6.0 dev training videos](https://dev.to/ingosteinke/shopware-changes-since-the-60-dev-training-videos-481o) for more changes since 6.0/6.1
+## Commands
 
-### Learning Goals / TODO List
+### Start the Shopware Development Container
 
-* [x] create a new Shopware installation locally
-* [x] recapitulate goals, techniques
-* [x] refine requirements
-* [ ] (re)create plugin code
-* [ ] check, compare with tutorial
-* [ ] test plugin in new installation
-* [ ] run static code checks (PhpStorm, phpstan, ...)
-* [ ] write proper documentation and meta information
-* [ ] validate and export plugin
-* [ ] test in another demoshop
-* [ ] make sure to know how to install a shop
-* [ ] ensure in a shop with subfolder path and subdomain
-* [ ] ensure in an uncommon language (e.g. Dutch or Turkish)
-* [ ] prepare for upload in official store to get extra validation results
+- `docker-compose up -d`
 
-### Further Goals / Optional Features
+### Open the Storefront or Administration in a Browser
 
-These features are not required to pass a simple coding test, but they also seem essential for working with Shopware 6 and creating more plugins.  
+- http://localhost/
+- http://localhost/admin (default credentials: admin:shopware)
 
-* [ ] understand PhpStan, ensure it's actually working
-* [ ] add unit tests (using PhpUnit)
-* [ ] add an integration tests (using Cypress or Codeception)
-* [ ] understand autoloading and use Symfony autowiring
-* [ ] understand and use Bootstrap
-* [ ] use SCSS for CSS compatibility
-* [ ] use stylelint for CSS code quality
-* [ ] understand and use Vue for admin coding
-* [ ] use eslint for ECMAScript code quality
-* [ ] use Babel for JavaScript compatibility
-* [ ] use content snippets
-* [ ] localize content
+### Enter the Container Shell
 
-#### Shopware Installations
-
-* [localhost](http://localhost/) (dockware/dev)
-
-##### Enter the Container Shell
-
-`docker exec -it shop bash`
+- `docker exec -it shop bash`
 
 You will start in the Shopware project root `/var/www/html` where you can type console commands like
 `bin/console plugin:create foobar`
 to create a new plugin structure.
 
-##### Shopware Platform Source Code in Dockware
+### Shopware CLI Scripts
+
+There is no more `psh.phar` in Shopware 6.5, but there is still `bin/console` and additional scripts in `/var/www/html/bin`:
+
+- `bin/build-administration.sh`
+- `bin/build-js.sh`
+- `bin/build-storefront.sh`
+- `bin/ci`
+- `bin/console`
+- `bin/functions.sh`
+- `bin/watch-administration.sh`
+- `bin/watch-storefront.sh`
+
+#### Useful Console Commands
+
+- `bin/console cache:clear`
+- `bin/console theme:refresh`
+
+### Stop the Container
+
+- `docker-compose stop`
+
+### Remove the Container
+
+- `docker-compose down -v` (-v will remove created volumes)
+
+## Logfile Locations
+
+### Shopware Logs in Dockware
+
+- `/var/www/html/var/log`
+
+#### System Logs in Dockware
+
+- `/var/log`
+
+## Shopware Platform Source Code in Dockware
 
 - `/var/www/html/vendor/shopware`
 
@@ -78,23 +77,11 @@ TODO: mounting this as a secondary volume broke the installation. Workaround to 
 
 `git clone https://github.com/shopware/shopware.git sw_platform_src`
 
-##### Shopware CLI Scripts
+## Learning: Possible Assignments and Requirements
 
-There is no more `psh.phar` in Shopware 6.5, but there is still `bin/console` and additional scripts in `/var/www/html/bin`:
+Create and customize a Shopware 6 demo plugin to recapitulate Shopware 6 developer tutorial before taking the certification exam. Use a controller to create a new public API endpoint to display custom content in the storefront. Add some custom styles and consider that plugin reviewers might install your plugin in a subdomain using an non-default locale like Dutch or Turkish, e.g. https://shopware.example.com/pazar/tr_TR/ and use an arbitrary API version like `@Route("/api/v42/_action`...
 
-- `build-administration.sh`
-- `build-js.sh`
-- `build-storefront.sh`
-- `ci`
-- `console`
-- `functions.sh`
-- `watch-administration.sh`
-- `watch-storefront.sh`
+## Shopware Deprecations
 
-##### Shopware Logs in Dockware
-
-- `/var/www/html/var/log`
-
-##### System Logs in Dockware
-
-- `/var/log`
+- since 6.5 there is no psh.phar anymore. You can find the replacements in the bin folder just ./bin/watch-administration.sh and so on (source: shyim in Shopware Slack)
+- see my subjective selective changelog post [Shopware changes since the 6.0 dev training videos](https://dev.to/ingosteinke/shopware-changes-since-the-60-dev-training-videos-481o) for more changes since 6.0/6.1
