@@ -66,6 +66,10 @@ These features are not required to pass a simple coding test, but they also seem
 
 `docker exec -it shop bash`
 
+You will start in the Shopware project root `/var/www/html` where you can type console commands like
+`bin/console plugin:create foobar`
+to create a new plugin structure.
+
 ##### Shopware Platform Source Code in Dockware
 
 - `/var/www/html/vendor/shopware`

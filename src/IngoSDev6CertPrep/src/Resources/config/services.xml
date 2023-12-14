@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="IngoS\Dev6CertPrep\Command\ExampleCommand">
+            <tag name="console.command"/>
+        </service>
+
+        <service id="IngoS\Dev6CertPrep\ScheduledTask\ExampleTask">
+            <tag name="shopware.scheduled.task"/>
+        </service>
+
+        <service id="IngoS\Dev6CertPrep\Subscriber\MySubscriber">
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+        <service id="IngoS\Dev6CertPrep\Storefront\Controller\ExampleController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+
+        <service id="IngoS\Dev6CertPrep\Core\Content\Example\SalesChannel\ExampleRoute">
+            <argument type="service" id="product.repository"/>
+        </service>
+
+        <service id="IngoS\Dev6CertPrep\Core\Content\IngosIngorance\IngosIngoranceDefinition">
+            <tag name="shopware.entity.definition" entity="ingos_ingorance" />
+        </service>
+
+        <service id="IngoS\Dev6CertPrep\Core\Content\FooBar\FooBarDefinition">
+            <tag name="shopware.entity.definition" entity="foo_bar" />
+        </service>
+
+        <service id="IngoS\Dev6CertPrep\Service\CustomFieldsInstaller">
+            <argument type="service" id="custom_field_set.repository"/>
+            <argument type="service" id="custom_field_set_relation.repository"/>
+        </service>
+
+    </services>
+</container>
