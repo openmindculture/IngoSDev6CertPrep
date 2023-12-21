@@ -51,6 +51,13 @@ There is no more `psh.phar` in Shopware 6.5, but there is still `bin/console` an
 - `bin/console cache:clear`
 - `bin/console theme:refresh`
 
+#### Optional Verbose vs. Silent Switches
+
+There is no verbose switch.
+Scripts seem to output verbose warnings by default. Add `--no-debug` to suppress  noncritical warnings and deprecation messages, e.g.:
+
+- `bin/console theme:compile --no-debug`
+
 ### Stop the Container
 
 - `docker-compose stop`
@@ -73,13 +80,17 @@ There is no more `psh.phar` in Shopware 6.5, but there is still `bin/console` an
 
 - `/var/www/html/vendor/shopware`
 
-TODO: mounting this as a secondary volume broke the installation. Workaround to see the shop source in the IDE: check it out into another, gitignored, directory:
+- TODO: mounting this as a secondary volume broke the installation.
 
-`git clone https://github.com/shopware/shopware.git sw_platform_src`
+- Workaround to see the shop source in the IDE: check it out into another, gitignored, directory:
+
+- `git clone https://github.com/shopware/shopware.git sw_platform_src`
 
 ## Learning: Possible Assignments and Requirements
 
-Create and customize a Shopware 6 demo plugin to recapitulate Shopware 6 developer tutorial before taking the certification exam. Use a controller to create a new public API endpoint to display custom content in the storefront. Add some custom styles and consider that plugin reviewers might install your plugin in a subdomain using an non-default locale like Dutch or Turkish, e.g. https://shopware.example.com/pazar/tr_TR/ and use an arbitrary API version like `@Route("/api/v42/_action`...
+- Create and customize a Shopware 6 demo plugin to recapitulate Shopware 6 developer tutorial before taking the certification exam. Use a controller to create a new public API endpoint to display custom content in the storefront. Add some custom styles and consider that plugin reviewers might install your plugin in a subdomain using an non-default locale like Dutch or Turkish, e.g. https://shopware.example.com/pazar/tr_TR/ and use an arbitrary API version like `@Route("/api/v42/_action`...
+- create and extend a maximum boilerplate plugin to learn what goes where.
+- create a minimal theme plugin that only replicates the tutorial example.
 
 ## Shopware Deprecations
 
