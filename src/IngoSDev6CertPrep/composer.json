@@ -1,5 +1,5 @@
 {
-    "name": "ingo-s\-dev6-cert-prep/ingo-s-dev6-cert-prep",
+    "name": "ingo-s/ingo-s-dev6-cert-prep",
     "description": "Skeleton plugin",
     "type": "shopware-platform-plugin",
     "version": "1.0.0",
@@ -8,7 +8,7 @@
         "shopware/core": "6.5.*"
     },
     "extra": {
-        "shopware-plugin-class": "IngoS\Dev6CertPrep\\IngoSDev6CertPrep",
+        "shopware-plugin-class": "IngoS\\IngoSDev6CertPrep\\IngoSDev6CertPrep",
         "label": {
             "de-DE": "Skeleton plugin",
             "en-GB": "Skeleton plugin"
@@ -16,12 +16,12 @@
     },
     "autoload": {
         "psr-4": {
-            "IngoS\Dev6CertPrep\\": "src/"
+            "IngoS\\IngoSDev6CertPrep\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IngoS\Dev6CertPrep\\Tests\\": "tests/"
+            "IngoS\\IngoSDev6CertPrep\\Tests\\": "tests/"
         }
     }
 }
