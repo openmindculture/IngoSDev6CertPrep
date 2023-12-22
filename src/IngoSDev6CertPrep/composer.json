@@ -1,6 +1,6 @@
 {
     "name": "ingo-s/ingo-s-dev6-cert-prep",
-    "description": "Skeleton plugin",
+    "description": "IngoSDev6CertPrep",
     "type": "shopware-platform-plugin",
     "version": "1.0.0",
     "license": "MIT",
@@ -8,20 +8,35 @@
         "shopware/core": "6.5.*"
     },
     "extra": {
-        "shopware-plugin-class": "IngoS\\IngoSDev6CertPrep\\IngoSDev6CertPrep",
+        "shopware-plugin-class": "IngoS\\Dev6CertPrep\\IngoSDev6CertPrep",
         "label": {
-            "de-DE": "Skeleton plugin",
-            "en-GB": "Skeleton plugin"
+            "de-DE": "IngoSDev6CertPrep",
+            "en-GB": "IngoSDev6CertPrep"
+        },
+        "copyright": "(c) by Ingo Steinke",
+        "plugin-icon": "src/Resources/config/plugin.png",
+        "description": {
+            "de-DE": "Beschreibung deutsch",
+            "en-GB": "Description English"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://www.ingo-steinke.de/",
+            "en-GB": "https://www.ingo-steinke.com/"
+        },
+        "supportLink": {
+            "de-DE": "https://www.ingo-steinke.de/",
+            "en-GB": "https://www.ingo-steinke.com/"
         }
     },
     "autoload": {
         "psr-4": {
-            "IngoS\\IngoSDev6CertPrep\\": "src/"
+            "IngoS\\Dev6CertPrep\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "IngoS\\IngoSDev6CertPrep\\Tests\\": "tests/"
+    "authors": [
+        {
+            "name": "IngoS",
+            "role": "Manufacturer"
         }
-    }
+    ]
 }

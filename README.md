@@ -92,7 +92,9 @@ Scripts seem to output verbose warnings by default. Add `--no-debug` to suppress
 - create and extend a maximum boilerplate plugin to learn what goes where.
 - create a minimal theme plugin that only replicates the tutorial example.
 
-## Shopware Deprecations
+Add useful examples missing in the tutorials and documentation like adding a theme preview screenshot and a default favicon icon image for browser bookmarks.
 
-- since 6.5 there is no psh.phar anymore. You can find the replacements in the bin folder just ./bin/watch-administration.sh and so on (source: shyim in Shopware Slack)
+## Shopware 6 Deprecations
+
+- since 6.5 there is no `psh.phar` anymore. You can find the replacements in the bin folder just `./bin/watch-administration.sh` and so on (source: shyim in Shopware Slack)
 - see my subjective selective changelog post [Shopware changes since the 6.0 dev training videos](https://dev.to/ingosteinke/shopware-changes-since-the-60-dev-training-videos-481o) for more changes since 6.0/6.1

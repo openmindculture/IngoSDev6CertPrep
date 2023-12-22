@@ -1,0 +1,22 @@
+{
+  "name": "ingo-s/ingo-s-minimal-theme",
+  "description": "Ingo's Minimal Theme",
+  "type": "shopware-platform-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "require": {
+    "shopware/core": "6.5.*"
+  },
+  "extra": {
+    "shopware-plugin-class": "IngoS\\MinimalTheme\\IngoSMinimalTheme",
+    "label": {
+      "de-DE": "Ingos Minimales Theme",
+      "en-GB": "Ingo's Minimal Theme"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "IngoS\\MinimalTheme\\": "src/"
+    }
+  }
+}

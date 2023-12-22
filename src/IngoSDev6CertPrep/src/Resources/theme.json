@@ -6,9 +6,7 @@
     "en-GB": "IngoSDev6CertPrep Theme Plugin",
     "de-DE": "IngoSDev6CertPrep Theme Plugin"
   },
-  "previewMedia": "app/storefront/dist/assets/defaultThemePreview.jpg",
-
-{
+  "previewMedia": "app/storefront/src/assets/defaultThemePreview.jpg",
     {
       "sw-logo-favicon": {
         "label": {
@@ -16,7 +14,7 @@
           "de-DE": "Favicon"
         },
         "type": "media",
-        "value": "app/storefront/dist/assets/logo/favicon.png",
+        "value": "app/storefront/src/assets/logo/favicon.png",
         "editable": true,
         "block": "media",
         "order": 500
