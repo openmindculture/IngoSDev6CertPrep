@@ -133,6 +133,7 @@ In the local development environment:
 - `bin/console cache:clear`
 - open http://localhost/admin
 - verify that you see `MyTheme` installed and activated in My extensions -> Themes!
+- (adjust file rights / ownerships so that the command line interface inside the docker container and the IDE user outside can both write to files and directories)
 
 Now you can modify the theme and repeat these steps:
 
@@ -140,13 +141,14 @@ Now you can modify the theme and repeat these steps:
 - `bin/build-storefront.sh`
 - `bin/console cache:clear`
 
+### Theme Export and Verification
+
 Last but not least, you can build an exportable zip archive file to upload into a shop backend or Shopware's plugin marketplace.
 
-TODO: 
-- theme export best practice
-- theme verification best practice
+There is an optional Shopware CLI that is not included in Dockware. You can get it from 
+[sw-cli.fos.gg](https://sw-cli.fos.gg) and use the `extension` command to build a theme file:
 
-Should we still use FroshTools?
+- `shopware-cli extension zip MyTheme`
 
 ## Shopware 6 Deprecations
 
