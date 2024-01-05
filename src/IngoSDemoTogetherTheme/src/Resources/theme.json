@@ -1,6 +1,6 @@
 {
-  "name": "IngoSCreatedTheme",
-  "author": "Shopware AG",
+  "name": "IngoSDemoTogetherTheme",
+  "author": "IngoS",
   "views": [
      "@Storefront",
      "@Plugins",
@@ -13,7 +13,7 @@
   ],
   "script": [
     "@Storefront",
-    "app/storefront/dist/storefront/js/ingo-s-created-theme.js"
+    "app/storefront/dist/storefront/js/ingo-s-demo-together-theme.js"
   ],
   "asset": [
     "@Storefront",

@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace IngoSCreatedTheme;
+namespace IngoS\DemoTogetherTheme;
 
 use Shopware\Core\Framework\Plugin;
 use Shopware\Storefront\Framework\ThemeInterface;
 
-class IngoSCreatedTheme extends Plugin implements ThemeInterface
+class IngoSDemoTogetherTheme extends Plugin implements ThemeInterface
 {
 }
