@@ -35,7 +35,7 @@ to create a new plugin structure.
 
 ### Shopware CLI Scripts
 
-There is no more `psh.phar` in Shopware 6.5, but there is still `bin/console` and additional scripts in `/var/www/html/bin`:
+Shopware 6.5 removed `psh.phar`, but there is still `bin/console` and additional scripts in `/var/www/html/bin`:
 
 - `bin/build-administration.sh`
 - `bin/build-js.sh`
@@ -86,13 +86,67 @@ Scripts seem to output verbose warnings by default. Add `--no-debug` to suppress
 
 - `git clone https://github.com/shopware/shopware.git sw_platform_src`
 
-## Learning: Possible Assignments and Requirements
+## Learning and Sharing
+
+### Possible Assignments, Requirements, Project Ideas
 
 - Create and customize a Shopware 6 demo plugin to recapitulate Shopware 6 developer tutorial before taking the certification exam. Use a controller to create a new public API endpoint to display custom content in the storefront. Add some custom styles and consider that plugin reviewers might install your plugin in a subdomain using an non-default locale like Dutch or Turkish, e.g. https://shopware.example.com/pazar/tr_TR/ and use an arbitrary API version like `@Route("/api/v42/_action`...
-- create and extend a maximum boilerplate plugin to learn what goes where.
-- create a minimal theme plugin that only replicates the tutorial example.
+- create a maximum boilerplate plugin for learning and as a reference
+- create a minimal theme plugin to replicate the tutorial example.
 
-Add useful examples missing in the tutorials and documentation like adding a theme preview screenshot and a default favicon icon image for browser bookmarks.
+### Ingo's Demo Theme: `IngoSDemoTogetherTheme`
+
+This example theme is based on a minimal boilerplate create by the Shopware 6.5 theme creation script (see "Theme Creation and Installation Cookbook" below).
+
+We can add useful examples missing in the tutorials and documentation like adding a theme preview screenshot and a default favicon icon image for browser bookmarks.
+
+We can use `IngoSDemoTogetherTheme` to fork future themes like when migrating existing customer shops from WooCommerce or Shopify.
+
+### Verify and Test
+
+- add tests (see leichteckig's Cypress tutorials, NCA workshops)
+  - end-to-end / frontend tests
+  - unit tests
+  - devOps QA:
+- destroy and recreate the docker setup, repeat documented steps
+- dto. in an alternative environment to ensure it runs on
+  - Linux: tested on Ubuntu 22.04 Linux 6.5
+  - Windows: test on Windows 10 (in my VirtualBox)
+  - MacOS: test on Sierra (on my vintage MacBook)
+- verify the theme on a shared web hosting server
+  - using `bin/console` via `ssh`
+  - using the admin web interface and upload a theme file!
+
+## Theme Creation and Installation Cookbook
+
+In the local development environment:
+
+- `docker-compose up -d`
+- `docker exec -it shop bash`
+- `bin/console theme:create MyTheme`
+- `bin/console plugin:refresh`
+- `bin/console plugin:install --activate MyTheme`
+- `bin/console theme:change`
+- in the menu, choose `[1] MyTheme`
+- choose to apply it to the `storefront` channel
+- `bin/build-storefront.sh`
+- `bin/console cache:clear`
+- open http://localhost/admin
+- verify that you see `MyTheme` installed and activated in My extensions -> Themes!
+
+Now you can modify the theme and repeat these steps:
+
+- `bin/console theme:compile`
+- `bin/build-storefront.sh`
+- `bin/console cache:clear`
+
+Last but not least, you can build an exportable zip archive file to upload into a shop backend or Shopware's plugin marketplace.
+
+TODO: 
+- theme export best practice
+- theme verification best practice
+
+Should we still use FroshTools?
 
 ## Shopware 6 Deprecations
 
