@@ -3,8 +3,8 @@
 namespace IngoS\DemoTogetherTheme;
 
 use Shopware\Core\Framework\Plugin;
-// use Shopware\Storefront\Framework\ThemeInterface;
+use Shopware\Storefront\Framework\ThemeInterface;
 
-class IngoSDemoTogetherTheme extends Plugin // implements ThemeInterface
+class IngoSDemoTogetherTheme extends Plugin implements ThemeInterface
 {
 }

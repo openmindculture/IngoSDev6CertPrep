@@ -18,5 +18,11 @@
     "psr-4": {
       "IngoS\\DemoTogetherTheme\\": "src/"
     }
-  }
+  },
+  "authors": [
+    {
+      "name": "IngoS",
+      "role": "Manufacturer"
+    }
+  ]
 }
