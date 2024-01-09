@@ -2,14 +2,10 @@
   "name": "ingo-s/ingo-s-demo-together-theme",
   "description": "Ingo's Demo Together Theme",
   "type": "shopware-platform-plugin",
+  "version": "1.0.0",
   "license": "MIT",
   "require": {
     "shopware/core": "6.5.*"
-  },
-  "autoload": {
-    "psr-4": {
-      "IngoSDemoTogetherTheme\\": "src/"
-    }
   },
   "extra": {
     "shopware-plugin-class": "IngoS\\DemoTogetherTheme\\IngoSDemoTogetherTheme",
@@ -18,10 +14,9 @@
       "en-GB": "Theme IngoSDemoTogether"
     }
   },
-  "authors": [
-    {
-      "name": "IngoS",
-      "role": "Manufacturer"
+  "autoload": {
+    "psr-4": {
+      "IngoS\\DemoTogetherTheme\\": "src/"
     }
-  ]
+  }
 }
