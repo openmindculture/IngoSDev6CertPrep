@@ -1,10 +1,14 @@
 {
   "name": "IngoSDemoTogetherTheme",
-  "author": "IngoS",
+  "author": "Ingo Steinke",
+  "description": {
+    "en-GB": "Ingo's Demo Together Theme",
+    "de-DE": "Ingo's Demo Together Theme"
+  },
   "views": [
      "@Storefront",
      "@Plugins",
-     "@IngoSCreatedTheme"
+     "@IngoSDemoTogetherTheme"
   ],
   "style": [
     "app/storefront/src/scss/overrides.scss",
@@ -18,5 +22,6 @@
   "asset": [
     "@Storefront",
     "app/storefront/src/assets"
-  ]
+  ],
+  "previewMedia": "app/storefront/src/assets/ThemePreview.png"
 }

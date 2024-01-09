@@ -3,26 +3,41 @@
   "description": "Ingo's Demo Together Theme",
   "type": "shopware-platform-plugin",
   "version": "1.0.0",
-  "license": "MIT",
+  "license": "proprietary",
   "require": {
-    "shopware/core": "6.5.*"
+    "shopware/core": "^6.5.0",
+    "shopware/storefront": "*"
+  },
+  "minimum-stability": "RC",
+  "autoload": {
+    "psr-4": {
+      "IngoS\\DemoTogetherTheme\\": "src/"
+    }
   },
   "extra": {
     "shopware-plugin-class": "IngoS\\DemoTogetherTheme\\IngoSDemoTogetherTheme",
     "label": {
       "de-DE": "Theme IngoSDemoTogether",
       "en-GB": "Theme IngoSDemoTogether"
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "IngoS\\DemoTogetherTheme\\": "src/"
+    },
+    "description": {
+      "en-GB": "Ingo's Demo Together Theme is a nice theme with a demo description which must have a minimum length. Well, that seems to be what it's like. We can do that somehow.",
+      "de-DE": "Ingo's Demo Together Theme ist ein nices Theme mit eine Demo-Beschreibung, die eine Mindestlänge haben muss. So ist das wohl nun. Das ist ja irgendwie machbar."
+    },
+    "manufacturerLink": {
+      "en-GB": "https://www.ingo-steinke.de/\"",
+      "de-DE": "https://www.ingo-steinke.de/\""
+    },
+    "supportLink": {
+      "en-GB": "https://www.ingo-steinke.de/\"",
+      "de-DE": "https://www.ingo-steinke.de/\""
     }
   },
   "authors": [
     {
       "name": "IngoS",
-      "role": "Manufacturer"
+      "role": "Manufacturer",
+      "homepage": "https://www.ingo-steinke.de/"
     }
   ]
 }
