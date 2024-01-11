@@ -1,0 +1,15 @@
+.product-box {
+  border-color: #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.product-image.is-standard {
+  object-fit: cover;
+  border: solid 1px blue;
+}
+
+product-box .card-body {
+  --bs-card-spacer-y: 0;
+  --bs-card-spacer-x: 0;
+}

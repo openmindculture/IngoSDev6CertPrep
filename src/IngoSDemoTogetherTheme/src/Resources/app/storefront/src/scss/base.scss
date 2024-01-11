@@ -1,0 +1,24 @@
+// TODO move to a more appropirate partial file
+//
+// these are obviously additional files,
+// no need to explicitly reuqire parent styles like we need to do in twig templates
+//
+// original files can be found at
+// platform/src/Storefront/Resources/app/storefront/src/scss/base.scss
+// sw_platform_src/src/Storefront/Resources/app/storefront/src/scss/skin/shopware/component/_product-box.scss
+// etc.
+
+// so we could move the styles below to a skin/shopware/component/_product-box.scss
+// or a component/_product-box.scss
+// and import it explicitly
+//
+// TODO verify and compare with
+// - theme plugin documentation / tutorials
+// - existing third party theme plugin(s)
+
+/*
+ * Modified
+ * Components
+ * ---------- */
+@import 'component/product-box';
+
