@@ -1,6 +1,9 @@
 {% sw_extends '@Storefront/storefront/page/product-detail/description.html.twig' %}
 {% comment %}is this correct?{% comment %}
 <!-- TODO this content will not be displayed in product details -->
+<!-- should this be @Storefront or @parent and why? -->
+<!-- does the following block exist at all? to extend a known block: -->
+<!-- {%  block ... %}{{  parent() }} + own content {{% endblock % }}
 
 {% block utilities_offcanvas_content %}
     <b>INSERTED content from src/Resources/views/storefront/page/product-detail/description.html.twig</b>
