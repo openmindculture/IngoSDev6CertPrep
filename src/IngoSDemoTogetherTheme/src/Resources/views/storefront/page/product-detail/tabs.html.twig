@@ -1,15 +1,13 @@
-{% sw_extends '@Storefront/storefront/page/product-detail/description.html.twig' %}
-{% comment %}is this correct?{% comment %}
-<!-- TODO this content will not be displayed in product details -->
-<!-- should this be @Storefront or @parent and why? -->
-<!-- does the following block exist at all? to extend a known block: -->
-<!-- {%  block ... %}{{  parent() }} + own content {{% endblock % }}
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
 
-{% block utilities_offcanvas_content %}
-    <b>INSERTED content from src/Resources/views/storefront/page/product-detail/description.html.twig</b>
+{% block page_product_detail_tabs_inner %}{{  parent() }}{% endblock %}
+
+{% block page_product_detail_tabs_content_description %}
+  {{  parent() }}
+    <b>INSERTED content from src/Resources/views/storefront/page/product-detail/tabs.html.twig</b>
     <style>
         #ingos-cost-group-production {
-            width: 45%; // TODO use dynamic values
+            width: 45%; /* TODO use dynamic values */
         }
         #ingos-cost-group-logistics {
             width: 40%;
@@ -39,7 +37,7 @@
         <div class="ingos-cost-group" id="ingos-cost-group-fulfilment" title="Fulfilment" onclick="ingos_cost_group_enter(this)">
             <div class="ingos-cost-group-bar"></div>
             <div class="ingos-cost-group-label">
-                <p class="ingos-cost-group-label-title">FoodTogether</p>
+                <p class="ingos-cost-group-label-title">Fulfilment</p>
                 <p class="ingos-cost-group-label-share">15%</p>
             </div>
         </div>
