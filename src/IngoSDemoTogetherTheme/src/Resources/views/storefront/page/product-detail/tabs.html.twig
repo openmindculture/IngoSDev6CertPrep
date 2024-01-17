@@ -4,7 +4,7 @@
 
 {% block page_product_detail_tabs_content_description %}
   {{  parent() }}
-    <b>INSERTED content from src/Resources/views/storefront/page/product-detail/tabs.html.twig</b>
+    <!-- INSERTED content from src/Resources/views/storefront/page/product-detail/tabs.html.twig -->
     <style>
         #ingos-cost-group-production {
             width: 45%; /* TODO use dynamic values */
@@ -17,11 +17,16 @@
         }
     </style>
     <div class="ingos-cost">
-
-        <div class="ingos-cost-group ingos-active" id="ingos-cost-group-production" title="Produktion" onclick="ingos_cost_group_enter(this)">
+        <!-- TODO use a dynamic loop -->
+        <!-- TODO replace legacy onclick handler by addEventListener when the content has loaded -->
+        <div
+                class="ingos-cost-group ingos-active"
+                id="ingos-cost-group-production" title="Produktion"
+                onclick="ingos_cost_group_enter(this)"
+        >
             <div class="ingos-cost-group-bar animate__animated animate__pulse"></div>
             <div class="ingos-cost-group-label">
-                <p class="ingos-cost-group-label-title">Produktion</p>
+                <p class="ingos-cost-group-label-title">Produktion<!-- TODO localize --></p>
                 <p class="ingos-cost-group-label-share">45%</p>
             </div>
         </div>

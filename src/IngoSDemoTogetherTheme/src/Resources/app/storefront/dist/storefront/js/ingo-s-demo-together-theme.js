@@ -1,1 +1,1 @@
-(self.webpackChunk=self.webpackChunk||[]).push([["ingo-s-demo-together-theme"],{9227:()=>{}},e=>{var h;h=9227,e(e.s=h)}]);
+(self.webpackChunk=self.webpackChunk||[]).push([["ingo-s-demo-together-theme"],{9227:()=>{console.log("main.js in theme plugin");console.log("implicit string assigned using const to verify if Shopware has a default transpilation")}},e=>{var s;s=9227,e(e.s=s)}]);
