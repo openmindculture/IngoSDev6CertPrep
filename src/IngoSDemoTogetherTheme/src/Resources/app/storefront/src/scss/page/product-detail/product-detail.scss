@@ -15,7 +15,9 @@
     position: static;
     cursor: pointer;
 
-    background-color: silver;
+    .ingos-cost-group-bar {
+      background-color: silver;
+    }
 
     &:nth-child(5n) .ingos-cost-group-bar {
       background-color: greenyellow;
