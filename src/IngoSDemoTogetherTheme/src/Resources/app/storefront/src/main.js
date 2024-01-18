@@ -9,7 +9,7 @@ console.log('after REALLY renaming main.js to main.ts');
 
 // <plugin root>/src/Resources/app/storefront/src/main.js
 // Import all necessary Storefront plugins
-import IngoSDemoTogetherTheme from 'ingo-s-demo-together-theme/ingo-s-demo-together-theme.js';
+import IngoSDemoTogetherTheme from './ingo-s-demo-together-theme/ingo-s-demo-together-theme';
 // Register your plugin via the existing PluginManager
 const PluginManager = window.PluginManager;
 PluginManager.register('IngoSDemoTogetherTheme', IngoSDemoTogetherTheme);
