@@ -17,9 +17,13 @@
 // - existing third party theme plugin(s)
 
 /*
- * Modified
- * Components
+ * Libraries
+ * ---------- */
+@import 'vendor/animate.css';
+
+/*
+ * Modified Components
  * ---------- */
 @import 'component/product-box';
 @import 'page/product-detail/product-detail';
-// TODO how to import 3rd party animate.css library if we wanted to?
+@import 'vendor/animate.css';
