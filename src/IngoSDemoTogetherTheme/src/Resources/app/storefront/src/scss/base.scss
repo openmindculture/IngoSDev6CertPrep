@@ -27,3 +27,58 @@
 @import 'component/product-box';
 @import 'layout/footer/footer';
 @import 'page/product-detail/product-detail';
+
+/* TODO : fix font paths
+GET http://localhost/bundles/mytheme/assets/fonts/ClimateCrisis-Regular-VariableFont_YEAR net::ERR_ABORTED 404 (Not Found)
+all.css:1
+
+
+       GET http://localhost/bundles/mytheme/assets/fonts/.woff2 net::ERR_ABORTED 404 (Not Found)
+ */
+
+@font-face {
+  font-family: 'Climate Crisis';
+  src: url('#{$my-asset-path}/fonts/ClimateCrisis-Regular-VariableFont_YEAR') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(#{$my-asset-path}/fonts/.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(#{$my-asset-path}/fonts/.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(#{$my-asset-path}/fonts/.woff2) format('woff2');
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "Climate Crisis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "YEAR" 1979;
+}
