@@ -15,16 +15,18 @@ use Shopware\Core\Framework\DataAbstractionLayer\FieldCollection;
 class FaqDefinition extends EntityDefinition
 {
     public const ENTITY_NAME = 'faq';
-    protected $technicalName;
-    protected $question;
     protected $answer;
+    protected $question;
+    protected $technicalName;
 
-    // TODO does the order of variables, fields, functions matter?
-    // as Database fields, possible parameters?
-
-    public function getTechnicalName(): string
+    public function getAnswer(): string
     {
-        return $this->technicalName;
+        return $this->answer;
+    }
+
+    public function setAnswer(string $answer): void
+    {
+        $this->answer = $answer;
     }
 
     public function getQuestion(): string
@@ -32,21 +34,20 @@ class FaqDefinition extends EntityDefinition
         return $this->question;
     }
 
-    public function getAnswer(): string
+    public function setQuestion(string $question): void
     {
-        return $this->answer;
+        $this->question = $question;
     }
 
-    // TODO why is getQuestion marked as unused, but not getTechnicalName?
-    // TODO why is $answer makred as unused but not $question?
-    // or is it a bug and it only marks the latest occurence?
+    public function getTechnicalName(): string
+    {
+        return $this->technicalName;
+    }
 
-    // TODO add setters for Q,A
-    public function setTechnicalName(string $technicalName)
+    public function setTechnicalName(string $technicalName): void
     {
         $this->technicalName = $technicalName;
     }
-
     public function getEntityName(): string
     {
         return self::ENTITY_NAME;
