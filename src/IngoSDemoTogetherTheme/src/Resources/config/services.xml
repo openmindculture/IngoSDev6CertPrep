@@ -9,4 +9,6 @@
             <tag name="shopware.entity.definition" entity="faq" />
         </service>
     </services>
+
+    <service
 </container>

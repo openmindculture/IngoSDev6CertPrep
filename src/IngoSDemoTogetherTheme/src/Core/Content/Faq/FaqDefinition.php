@@ -70,7 +70,9 @@ class FaqDefinition extends EntityDefinition
             new StringField('name', 'name'),
             new CreatedAtField(),
             new UpdatedAtField(),
-            // TODO add $technicalName, $question, $answer here?
+            new StringField('answer', 'answer'),
+            new StringField('question', 'question'),
+            new StringField('technicalName', 'technicalName'),
         ]);
     }
 }
