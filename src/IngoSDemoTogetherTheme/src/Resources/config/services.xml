@@ -8,7 +8,11 @@
         <service id="IngoS\DemoTogetherTheme\Core\Content\Faq\FaqDefinition">
             <tag name="shopware.entity.definition" entity="faq" />
         </service>
+
+        <service id="IngoS\DemoTogetherTheme\Core\Content\Faq\FaqList">
+            <argument type="service" id="faq.repository"/>
+            <tag name="core.content.faq" />
+        </service>
     </services>
 
-    <service
 </container>
