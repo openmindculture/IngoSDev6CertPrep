@@ -9,12 +9,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route(defaults: ['_routeScope' => ['storefront']])]
-class ExampleController extends StorefrontController
+class FaqController extends StorefrontController
 {
-    #[Route(path: '/example', name: 'frontend.example.example', methods: ['GET'])]
-    public function showExample(): Response
+    #[Route(path: '/faq', name: 'core.content.faq', methods: ['GET'])]
+    public function showFaq(): Response
     {
-        return $this->renderStorefront('@SwagBasicExample/storefront/page/example.html.twig', [
+        return $this->renderStorefront('@IngoSDemoTogetherTheme/storefront/page/faq/faq.html.twig', [
             'example' => 'Hello world'
         ]);
     }
