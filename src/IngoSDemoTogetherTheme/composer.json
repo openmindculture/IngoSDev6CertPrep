@@ -11,11 +11,11 @@
   "minimum-stability": "RC",
   "autoload": {
     "psr-4": {
-      "IngoS\\DemoTogetherTheme\\": "src/"
+      "IngoSDemoTogetherTheme\\": "src/"
     }
   },
   "extra": {
-    "shopware-plugin-class": "IngoS\\DemoTogetherTheme\\IngoSDemoTogetherTheme",
+    "shopware-plugin-class": "IngoSDemoTogetherTheme\\IngoSDemoTogetherTheme",
     "label": {
       "de-DE": "Theme IngoSDemoTogether",
       "en-GB": "Theme IngoSDemoTogether"

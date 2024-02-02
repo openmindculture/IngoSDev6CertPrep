@@ -1,6 +1,6 @@
 <?php
 
-namespace IngoS\DemoTogetherTheme\Core\Content\Faq;
+namespace IngoSDemoTogetherTheme\Core\Content\Faq;
 
 class FaqList
 {

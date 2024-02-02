@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace IngoS\DemoTogetherTheme\Core\Content\Faq;
+namespace IngoSDemoTogetherTheme\Core\Content\Faq;
 
 use Shopware\Core\Framework\DataAbstractionLayer\EntityCollection;
 

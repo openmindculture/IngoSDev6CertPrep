@@ -5,16 +5,16 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="IngoS\DemoTogetherTheme\Core\Content\Faq\FaqDefinition">
+        <service id="IngoSDemoTogetherTheme\Core\Content\Faq\FaqDefinition">
             <tag name="shopware.entity.definition" entity="faq" />
         </service>
 
-        <service id="IngoS\DemoTogetherTheme\Core\Content\Faq\FaqList">
+        <service id="IngoSDemoTogetherTheme\Core\Content\Faq\FaqList">
             <argument type="service" id="faq.repository"/>
             <tag name="core.content.faq" />
         </service>
 
-        <service id="IngoS\DemoTogteherTheme\Storefront\Controller\IngoSDemoTogetherThemeController" public="true">
+        <service id="IngoSDemoTogteherTheme\Storefront\Controller\IngoSDemoTogetherThemeController" public="true">
             <call method="setContainer">
                 <argument type="service" id="service_container"/>
             </call>

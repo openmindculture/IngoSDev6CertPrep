@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace IngoS\DemoTogetherTheme\Storefront\Controller;
+namespace IngoSDemoTogetherTheme\Storefront\Controller;
 
 use Shopware\Core\System\SalesChannel\SalesChannelContext;
 use Shopware\Storefront\Controller\StorefrontController;

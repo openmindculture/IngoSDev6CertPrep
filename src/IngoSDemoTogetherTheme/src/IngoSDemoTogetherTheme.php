@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace IngoS\DemoTogetherTheme;
+namespace IngoSDemoTogetherTheme;
 
 use Shopware\Core\Framework\Plugin;
 use Shopware\Storefront\Framework\ThemeInterface;
