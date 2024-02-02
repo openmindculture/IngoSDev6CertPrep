@@ -10,6 +10,20 @@ Thanks to [dasistweb](https://www.dasistweb.de/), the Docker-based [dockware](ht
 
 ## Plugins
 
+### IngoSDemoTogetherTheme
+
+**Ingo's Demo Together Theme** is based on a late 2023 (Shopware 6.5) theme skeleton and inspired both by previous practice examples and by other customers' requirements and their current implementations using Shopify or WooCommerce. This theme tries to combine frontend customization and adding custom content, including a new entity (FAQ) and a new route (URL) to a simple static page.
+
+Ingo's Demo Together Theme could also serve as a code base for actual projects and possible Shopware migrations in the future.
+
+#### Namespace without seperating the vendor prefix
+
+Note that this theme plugin does not separate the vendor prefix from the rest of the plugin name, in order to ensure consistency between the PHP namespace and the theme's directory structure.
+
+#### Explicit service attributes and setTwig injection
+
+As Shopware 6.5 does not use PHP autowiring by default, the code follows Shopware's documentation (and forum posts and issues) by explicitly defining services, subscribers, and injecting `setTwig` and `setContainer` in `src/Resources/config/services.xml`.
+
 ### IngoS\Dev6CertPrep
 
 This theme plugin is based on a maximum example created by `bin/console plugin:create` and adding a preview image and additional frontend-specific asset resources like a favicon icon for localhost. Using a `theme.json` file is optional and its content might be redundant as long as the default locations for assets don't change.
