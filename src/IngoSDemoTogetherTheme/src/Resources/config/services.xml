@@ -14,7 +14,7 @@
             <tag name="core.content.faq" />
         </service>
 
-        <service id="IngoSDemoTogteherTheme\Storefront\Controller\IngoSDemoTogetherThemeController" public="true">
+        <service id="IngoSDemoTogetherTheme\Storefront\Controller\IngoSDemoTogetherThemeController" public="true">
             <call method="setContainer">
                 <argument type="service" id="service_container"/>
             </call>
