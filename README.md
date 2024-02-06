@@ -24,6 +24,18 @@ Note that this theme plugin does not separate the vendor prefix from the rest of
 
 As Shopware 6.5 does not use PHP autowiring by default, the code follows Shopware's documentation (and forum posts and issues) by explicitly defining services, subscribers, and injecting `setTwig` and `setContainer` in `src/Resources/config/services.xml`.
 
+#### Testing
+
+- Frontend/Storefront/End-to-end tests using Cypress
+  - assert that http://localhost returns a 200 OK status code.
+  - assert that http://localhost/simpleSeite returns a 200 OK status code.
+  - assert that http://localhost/simpleSeite contains (heading) text "simpleSeite".
+  - assert that http://localhost/faq returns a 200 OK status code.
+  - assert that http://localhost/faq contains (heading) text "FAQ".
+- Unit tests for backend components using Jest and/or PhpUnit (TODO)
+
+See [Shopware developers documentation: Extensions: Testing](https://developer.shopware.com/docs/guides/plugins/plugins/testing/).
+
 ### IngoS\Dev6CertPrep
 
 This theme plugin is based on a maximum example created by `bin/console plugin:create` and adding a preview image and additional frontend-specific asset resources like a favicon icon for localhost. Using a `theme.json` file is optional and its content might be redundant as long as the default locations for assets don't change.
