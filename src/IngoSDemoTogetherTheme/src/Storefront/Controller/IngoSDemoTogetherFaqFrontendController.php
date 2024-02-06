@@ -18,15 +18,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route(defaults: ['_routeScope' => ['storefront']])]
-class IngoSDemoTogetherThemeController extends StorefrontController
+class IngoSDemoTogetherFaqFrontendController extends StorefrontController
 {
-
-    #[Route(path: '/simpleSeite', name: 'frontend.page.simpleSeite', methods: ['GET'])]
-    public function simpleSeite(): Response
+    #[Route(path: '/faq', name: 'core.content.faq', methods: ['GET'])]
+    public function showFaq(): Response
     {
-        return $this->renderStorefront('@IngoSDemoTogetherTheme/storefront/page/simpleSeite.html.twig', [
+        return $this->renderStorefront('@IngoSDemoTogetherTheme/storefront/page/faq/faq.html.twig', [
             'example' => 'example parameter content defined in IngoSDemoTogetherThemeController.php'
         ]);
     }
-
 }

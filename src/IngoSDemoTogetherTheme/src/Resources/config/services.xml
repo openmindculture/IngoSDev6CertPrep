@@ -22,6 +22,24 @@
                 <argument type="service" id="twig"/>
             </call>
         </service>
+
+        <service id="IngoSDemoTogetherTheme\Storefront\Controller\IngoSDemoTogetherFaqFrontendController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <call method="setTwig">
+                <argument type="service" id="twig"/>
+            </call>
+        </service>
+
+        <service id="IngoSDemoTogetherTheme\Storefront\Controller\IngoSDemoTogetherFaqController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <call method="setTwig">
+                <argument type="service" id="twig"/>
+            </call>
+        </service>
     </services>
 
 </container>
