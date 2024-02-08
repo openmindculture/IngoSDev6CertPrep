@@ -2,7 +2,11 @@
 
 How to develop themes plugins for Shopware 6 when the documentation is often incomplete or outdated and many certificied Shopware development agencies keep their experience and knowledge secret or they are just too busy to share? This repository obsoletes earlier versions that I created as container for learning and open-source development. I tried to collect and share publicly available information here, on Slack, and in my DEV blog series [Learning in Public](https://dev.to/ingosteinke/series/16707).
 
-My notes and examples try to follow a pragmatic interpretation of the latest best practice for Shopware 6.5 community edition.
+My notes and examples try to follow a pragmatic interpretation of the latest best practice for Shopware 6.5 community edition and upcoming versions, focusing on frontend customization plus possible backend extensions like custom fields, custom entities, and new routes to additional page types.
+
+A discontinued feature branch for certification preparation contains steps towards a maximalistic full-on example of what could be done using plugins, inspired by the original Shopware Academy training videos (see [tag 0.1.1](https://github.com/openmindculture/IngoSDev6CertPrep/releases/tag/0.1.1)).
+
+Current development will focus on minimalism, pragmatism, and frontend optimization instead, like using animation, color, transparency, and interactivity with web performance (page speed) optimization, usability, cross-device compatibility, and accessibility in mind. Buzz words dropped, let's elaborate on some more specific development details below:
 
 ## Dockware Development Environment
 

@@ -94,6 +94,7 @@ class FaqDefinition extends EntityDefinition
         $this->language = $language;
     }
 
+    // All fields that should be available through the API require the flag ApiAware in the definition.
     protected function defineFields(): FieldCollection
     {
         return new FieldCollection([
