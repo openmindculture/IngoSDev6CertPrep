@@ -1,6 +1,8 @@
-# Shopware 6 Theme Plugin Development Templates
+# Shopware 6.5 Theme Plugin Development Templates
 
 How to develop themes plugins for Shopware 6 when the documentation is often incomplete or outdated and many certified Shopware development agencies keep their experience and knowledge secret or they are just too busy to share? This repository obsoletes earlier versions that I created as container for learning and open-source development. I tried to collect and share publicly available information here, on Slack, and in my DEV blog series [Learning in Public](https://dev.to/ingosteinke/series/16707).
+
+**Deprecated**: this project has been updated up to Shopware 6.5 and might be outdated by now. Always check the latest official documentation!
 
 My notes and examples try to follow a pragmatic interpretation of the latest best practice for Shopware 6.5 community edition and upcoming versions, focusing on frontend customization plus possible backend extensions like custom fields, custom entities, and new routes to additional page types.
 
